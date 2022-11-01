@@ -1,0 +1,26 @@
+{
+  "name": "preentrega3-zitelli",
+  "version": "1.0.0",
+  "description": "Esta es la tercera pre entrega del trabajo final de la carrera Desarrollo Web",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "sass stylesheets/main.scss estilos/styles.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "keywords": [
+    "PreEntrega",
+    "3",
+    "Desarrollo",
+    "SASS",
+    "HTML",
+    "CSS",
+    "GIT"
+  ],
+  "author": "Camila Zitelli",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.0.20",
+    "sass": "^1.55.0"
+  }
+}
