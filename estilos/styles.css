@@ -79,6 +79,7 @@ main {
   background-color: whitesmoke;
   position: relative;
   margin: auto;
+  font-family: "bebas neue", cursive;
 }
 
 h1 {
@@ -161,6 +162,32 @@ body {
 
 p {
   text-indent: 25px;
+}
+
+.contenedorcentral {
+  text-align: center;
+  font-family: "bebas neue", cursive;
+  display: grid;
+  grid-template-areas: "titulo", "texto";
+  align-items: start;
+  margin: auto;
+  padding-bottom: 5%;
+  padding-top: 5%;
+}
+
+.navcontainer {
+  display: flex;
+  flex-direction: row;
+  font-family: "Bebas Neue", cursive;
+  background-color: whitesmoke;
+}
+
+#formulariodecontacto {
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 5%;
+  padding-top: 5%;
 }
 
 /*# sourceMappingURL=styles.css.map */
