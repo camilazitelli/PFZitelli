@@ -119,16 +119,39 @@ h1 {
 
 /*Animacion*/
 .barrel {
-  animation-name: barrel;
+  -webkit-animation-name: barrel;
+          animation-name: barrel;
   width: 100px;
   height: 100px;
   margin-top: -25px;
   margin-left: -30px;
   padding: 25px;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in;
-  animation-duration: 2s;
-  animation-delay: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+@-webkit-keyframes barrel {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 @keyframes barrel {
@@ -161,6 +184,4 @@ body {
 
 p {
   text-indent: 25px;
-}
-
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=main.css.map */
