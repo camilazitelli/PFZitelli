@@ -13,12 +13,10 @@ footer {
   padding: 10px;
   font-family: "Bebas Neue", cursive;
 }
-
 footer a {
   text-decoration: none;
   color: #76323F;
 }
-
 footer:hover {
   background-image: linear-gradient(to bottom, #D7CEC7, #C09F80);
 }
@@ -36,7 +34,6 @@ nav {
   font-family: "Bebas Neue", cursive;
   background-color: whitesmoke;
 }
-
 nav a {
   color: #565656;
   padding: 14px 20px;
@@ -69,7 +66,6 @@ ul {
   height: 400px;
   transition: opacity 1s;
 }
-
 .fotocatalogo:hover {
   opacity: 70%;
   filter: blur(5px);
@@ -113,7 +109,6 @@ h1 {
   color: white;
   margin: 3%;
 }
-
 .texto:hover {
   font-size: 70px;
 }
@@ -136,7 +131,6 @@ h1 {
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
 }
-
 @-webkit-keyframes barrel {
   0% {
     transform: rotate(0deg);
@@ -154,7 +148,6 @@ h1 {
     transform: rotate(0deg);
   }
 }
-
 @keyframes barrel {
   0% {
     transform: rotate(0deg);
@@ -172,6 +165,7 @@ h1 {
     transform: rotate(0deg);
   }
 }
+
 body {
   background-color: #f5dd7b;
 }

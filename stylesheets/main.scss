@@ -12,15 +12,13 @@ footer {
     bottom: 0;
     padding: 10px;
     font-family: 'Bebas Neue', cursive;
-}
-
-footer a{
-    text-decoration: none;
-    color: #76323F;
-}
-
-footer:hover {
-    background-image: linear-gradient(to bottom,#D7CEC7,#C09F80);
+    a{
+        text-decoration: none;
+        color: #76323F;
+    }
+    &:hover {
+        background-image: linear-gradient(to bottom,#D7CEC7,#C09F80);
+    }
 }
 
 header {
@@ -35,12 +33,11 @@ nav {
     flex-direction: row;
     font-family: 'Bebas Neue', cursive;
     background-color:whitesmoke ;
-}
-
-nav a{
-    color: #565656;
-    padding: 14px 20px;
-    text-decoration: none;
+    a{
+        color: #565656;
+        padding: 14px 20px;
+        text-decoration: none;
+    }
 }
 
 .principal {
@@ -68,11 +65,10 @@ ul {
     width: 300px;
     height: 400px;
     transition: opacity 1s;
-}
-
-.fotocatalogo:hover {
-    opacity: 70%;
-    filter: blur(5px);
+    &:hover {
+        opacity: 70%;
+        filter: blur(5px);
+    }
 }
 
 main {
@@ -111,10 +107,9 @@ h1 {
     font-size: 60px;
     color: white;
     margin: 3%;
-}
-
-.texto:hover {
-    font-size: 70px;
+    &:hover {
+        font-size: 70px;
+    }
 }
 
 /*Animacion*/
@@ -130,14 +125,13 @@ h1 {
     animation-timing-function: ease-in;
     animation-duration: 2s;
     animation-delay: 2s;
-}
-
-@keyframes barrel {
-0% { transform: rotate(0deg); }
-25% { transform: rotate(5deg); }
-50% { transform: rotate(0deg); }
-75% { transform: rotate(-5deg); }
-100% { transform: rotate(0deg); }
+    @keyframes barrel {
+        0% { transform: rotate(0deg); }
+        25% { transform: rotate(5deg); }
+        50% { transform: rotate(0deg); }
+        75% { transform: rotate(-5deg); }
+        100% { transform: rotate(0deg); }
+        }
 }
 
 body{
