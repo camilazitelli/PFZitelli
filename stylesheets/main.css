@@ -28,6 +28,16 @@ header {
   padding: 50px;
 }
 
+.encabezado {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.encabezado h1 {
+  font-family: "Rock Salt", cursive;
+}
+
 nav {
   display: flex;
   flex-direction: row;
@@ -49,6 +59,15 @@ nav a {
   padding: 50px;
   position: relative;
 }
+.principal .fotocatalogo {
+  width: 300px;
+  height: 400px;
+  transition: opacity 1s;
+}
+.principal .fotocatalogo:hover {
+  opacity: 70%;
+  filter: blur(5px);
+}
 
 ul {
   list-style: none;
@@ -59,27 +78,6 @@ ul {
   width: 19%;
   font-size: 14px;
   position: relative;
-}
-
-.fotocatalogo {
-  width: 300px;
-  height: 400px;
-  transition: opacity 1s;
-}
-.fotocatalogo:hover {
-  opacity: 70%;
-  filter: blur(5px);
-}
-
-main {
-  background-color: whitesmoke;
-  position: relative;
-  margin: auto;
-  font-family: "bebas neue", cursive;
-}
-
-h1 {
-  font-family: "Rock Salt", cursive;
 }
 
 @media screen and (max-width: 768px) {
@@ -169,12 +167,18 @@ h1 {
 body {
   background-color: #f5dd7b;
 }
-
-.encabezado {
+body main {
+  background-color: whitesmoke;
+  position: relative;
+  margin: auto;
+  font-family: "bebas neue", cursive;
+}
+body main #formulariodecontacto {
+  margin: auto;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-bottom: 5%;
+  padding-top: 5%;
 }
 
 p {
@@ -197,12 +201,4 @@ p {
   flex-direction: row;
   font-family: "Bebas Neue", cursive;
   background-color: whitesmoke;
-}
-
-#formulariodecontacto {
-  margin: auto;
-  display: flex;
-  justify-content: space-around;
-  padding-bottom: 5%;
-  padding-top: 5%;
 }/*# sourceMappingURL=main.css.map */

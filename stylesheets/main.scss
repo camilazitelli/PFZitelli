@@ -27,6 +27,15 @@ header {
     text-align: start;
     padding: 50px;
 }
+.encabezado {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    h1 {
+        font-family: 'Rock Salt', cursive;
+    }
+}
 
 nav {
     display: flex;
@@ -48,6 +57,15 @@ nav {
     background-color: whitesmoke;
     padding: 50px;
     position: relative;
+    .fotocatalogo {
+        width: 300px;
+        height: 400px;
+        transition: opacity 1s;
+        &:hover {
+            opacity: 70%;
+            filter: blur(5px);
+        }
+    }
 }
 
 ul {
@@ -59,27 +77,6 @@ ul {
     width: 19%;
     font-size: 14px;
     position: relative;
-}
-
-.fotocatalogo {
-    width: 300px;
-    height: 400px;
-    transition: opacity 1s;
-    &:hover {
-        opacity: 70%;
-        filter: blur(5px);
-    }
-}
-
-main {
-    background-color: whitesmoke;
-    position: relative;
-    margin: auto;
-    font-family: 'bebas neue', cursive;
-}
-
-h1 {
-    font-family: 'Rock Salt', cursive;
 }
 
 @media screen and (max-width: 768px) {
@@ -136,13 +133,19 @@ h1 {
 
 body{
     background-color: #f5dd7b;
-}
-
-.encabezado {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    flex-wrap: wrap;
+    main {
+        background-color: whitesmoke;
+        position: relative;
+        margin: auto;
+        font-family: 'bebas neue', cursive;
+        #formulariodecontacto {
+            margin: auto;
+            display: flex;
+            justify-content: space-around;
+            padding-bottom: 5%;
+            padding-top: 5%;
+        }
+    }
 }
 
 p {
@@ -169,10 +172,3 @@ p {
     background-color:whitesmoke ;
 }
 
-#formulariodecontacto {
-    margin: auto;
-    display: flex;
-    justify-content: space-around;
-    padding-bottom: 5%;
-    padding-top: 5%;
-}
