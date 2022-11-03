@@ -1,16 +1,28 @@
+/* Variables */
+$step: 100px;
+
+/*Mixin*/
+@mixin fontandbackground {
+    background-color: whitesmoke;
+    font-family: 'bebas neue', cursive;
+}
+
+/*Condicionales*/
+$fondo: whitesmoke;
+
+
 footer {
     color:whitesmoke;
     background-color: #d7cec7;
     display: flex;
     flex-direction: row;
-    width: 100%;
     position: relative;
     margin-bottom: -10px;
     margin-top: -10px;
     width: 100%;
     transition: background-image 2s;
     bottom: 0;
-    padding: 10px;
+    padding: $step/10;
     font-family: 'Bebas Neue', cursive;
     a{
         text-decoration: none;
@@ -19,19 +31,29 @@ footer {
     &:hover {
         background-image: linear-gradient(to bottom,#D7CEC7,#C09F80);
     }
+    p {
+        text-indent: $step/4;
+    }
+}
+@media screen and (max-width: 768px) {
+    footer {flex-direction: column;
+    }
 }
 
 header {
     background-color: whitesmoke;
     color: #565656;
     text-align: start;
-    padding: 50px;
+    padding: $step/2;
+    width: 100%;
 }
+
 .encabezado {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     flex-wrap: wrap;
+    width: 100%;
     h1 {
         font-family: 'Rock Salt', cursive;
     }
@@ -40,12 +62,16 @@ header {
 nav {
     display: flex;
     flex-direction: row;
-    font-family: 'Bebas Neue', cursive;
-    background-color:whitesmoke ;
+    @include fontandbackground();
+    width: 100%;
     a{
         color: #565656;
         padding: 14px 20px;
         text-decoration: none;
+    }
+    @media screen and (max-width: 768px) {
+        .navcontainer {flex-direction: column;
+        }
     }
 }
 
@@ -55,16 +81,20 @@ nav {
     justify-content: space-evenly;
     margin: auto;
     background-color: whitesmoke;
-    padding: 50px;
+    padding: $step/2;
     position: relative;
     .fotocatalogo {
-        width: 300px;
-        height: 400px;
+        width: $step * 3;
+        height: $step * 4;
         transition: opacity 1s;
         &:hover {
             opacity: 70%;
             filter: blur(5px);
         }
+        }
+        @media screen and (max-width: 768px) {
+            .fotocatalogo {width: $step * 2; height: $step * 3;
+            }
     }
 }
 
@@ -72,40 +102,30 @@ ul {
     list-style: none;
 }
 
-.menu {
+/*.menu {
     display: inline-block;
     width: 19%;
     font-size: 14px;
     position: relative;
-}
-
-@media screen and (max-width: 768px) {
-    footer {flex-direction: column;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .cabecera {flex-direction: column;
-    }
-}
+}*/
 
 .caja {
     position: relative;
     display: inline-block;
     justify-self: center;
-    padding: 25px;
+    padding: $step/4;
     margin-left: 0,2%;
     left: 5%;
-}
-.texto {
-    position: absolute;
-    top: 20%;
-    font-family: 'bebas neue', cursive;
-    font-size: 60px;
-    color: white;
-    margin: 3%;
-    &:hover {
-        font-size: 70px;
+    .texto {
+        position: absolute;
+        top: 20%;
+        font-family: 'bebas neue', cursive;
+        font-size: 60px;
+        color: white;
+        margin: 3%;
+        &:hover {
+            font-size: 70px;
+        }
     }
 }
 
@@ -113,11 +133,11 @@ ul {
 
 .barrel {
     animation-name: barrel;
-    width: 100px;
-    height: 100px;
+    width: $step;
+    height: $step;
     margin-top: -25px;
     margin-left: -30px;
-    padding: 25px;
+    padding: $step/4;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in;
     animation-duration: 2s;
@@ -134,10 +154,21 @@ ul {
 body{
     background-color: #f5dd7b;
     main {
-        background-color: whitesmoke;
         position: relative;
         margin: auto;
-        font-family: 'bebas neue', cursive;
+        @include fontandbackground();
+        .contenedorcentral {
+            text-align: center;
+            font-family: 'bebas neue', cursive;
+            display: grid;
+            grid-template-areas: 
+            "titulo",
+            "texto",;
+            align-items: start;
+            margin: auto;
+            padding-bottom: 5%;
+            padding-top: 5%;
+        }
         #formulariodecontacto {
             margin: auto;
             display: flex;
@@ -148,27 +179,13 @@ body{
     }
 }
 
-p {
-    text-indent: 25px;
-}
-
-.contenedorcentral {
-    text-align: center;
-    font-family: 'bebas neue', cursive;
-    display: grid;
-    grid-template-areas: 
-    "titulo",
-    "texto",;
-    align-items: start;
-    margin: auto;
-    padding-bottom: 5%;
-    padding-top: 5%;
+@if $fondo == whitesmoke {
+    main {color: #565656;}
 }
 
 .navcontainer {
     display: flex;
     flex-direction: row;
-    font-family: 'Bebas Neue', cursive;
-    background-color:whitesmoke ;
+    width: 100%;
+    @include fontandbackground();
 }
-

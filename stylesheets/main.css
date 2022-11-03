@@ -1,9 +1,11 @@
+/* Variables */
+/*Mixin*/
+/*Condicionales*/
 footer {
   color: whitesmoke;
   background-color: #d7cec7;
   display: flex;
   flex-direction: row;
-  width: 100%;
   position: relative;
   margin-bottom: -10px;
   margin-top: -10px;
@@ -20,12 +22,21 @@ footer a {
 footer:hover {
   background-image: linear-gradient(to bottom, #D7CEC7, #C09F80);
 }
+footer p {
+  text-indent: 25px;
+}
 
+@media screen and (max-width: 768px) {
+  footer {
+    flex-direction: column;
+  }
+}
 header {
   background-color: whitesmoke;
   color: #565656;
   text-align: start;
   padding: 50px;
+  width: 100%;
 }
 
 .encabezado {
@@ -33,6 +44,7 @@ header {
   flex-direction: row;
   justify-content: flex-start;
   flex-wrap: wrap;
+  width: 100%;
 }
 .encabezado h1 {
   font-family: "Rock Salt", cursive;
@@ -41,13 +53,19 @@ header {
 nav {
   display: flex;
   flex-direction: row;
-  font-family: "Bebas Neue", cursive;
   background-color: whitesmoke;
+  font-family: "bebas neue", cursive;
+  width: 100%;
 }
 nav a {
   color: #565656;
   padding: 14px 20px;
   text-decoration: none;
+}
+@media screen and (max-width: 768px) {
+  nav .navcontainer {
+    flex-direction: column;
+  }
 }
 
 .principal {
@@ -68,28 +86,23 @@ nav a {
   opacity: 70%;
   filter: blur(5px);
 }
+@media screen and (max-width: 768px) {
+  .principal .fotocatalogo {
+    width: 200px;
+    height: 300px;
+  }
+}
 
 ul {
   list-style: none;
 }
 
-.menu {
-  display: inline-block;
-  width: 19%;
-  font-size: 14px;
-  position: relative;
-}
-
-@media screen and (max-width: 768px) {
-  footer {
-    flex-direction: column;
-  }
-}
-@media screen and (max-width: 768px) {
-  .cabecera {
-    flex-direction: column;
-  }
-}
+/*.menu {
+    display: inline-block;
+    width: 19%;
+    font-size: 14px;
+    position: relative;
+}*/
 .caja {
   position: relative;
   display: inline-block;
@@ -98,8 +111,7 @@ ul {
   margin-left: 0, 2%;
   left: 5%;
 }
-
-.texto {
+.caja .texto {
   position: absolute;
   top: 20%;
   font-family: "bebas neue", cursive;
@@ -107,7 +119,7 @@ ul {
   color: white;
   margin: 3%;
 }
-.texto:hover {
+.caja .texto:hover {
   font-size: 70px;
 }
 
@@ -168,24 +180,12 @@ body {
   background-color: #f5dd7b;
 }
 body main {
-  background-color: whitesmoke;
   position: relative;
   margin: auto;
+  background-color: whitesmoke;
   font-family: "bebas neue", cursive;
 }
-body main #formulariodecontacto {
-  margin: auto;
-  display: flex;
-  justify-content: space-around;
-  padding-bottom: 5%;
-  padding-top: 5%;
-}
-
-p {
-  text-indent: 25px;
-}
-
-.contenedorcentral {
+body main .contenedorcentral {
   text-align: center;
   font-family: "bebas neue", cursive;
   display: grid;
@@ -195,10 +195,22 @@ p {
   padding-bottom: 5%;
   padding-top: 5%;
 }
+body main #formulariodecontacto {
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 5%;
+  padding-top: 5%;
+}
+
+main {
+  color: #565656;
+}
 
 .navcontainer {
   display: flex;
   flex-direction: row;
-  font-family: "Bebas Neue", cursive;
+  width: 100%;
   background-color: whitesmoke;
+  font-family: "bebas neue", cursive;
 }/*# sourceMappingURL=main.css.map */
