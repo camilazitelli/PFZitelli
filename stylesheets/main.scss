@@ -1,19 +1,15 @@
-/* Variables */
-$step: 100px;
+@import "masterstylesheet";
+
 
 /*Mixin*/
 @mixin fontandbackground {
-    background-color: whitesmoke;
-    font-family: 'bebas neue', cursive;
+    background-color: $blanco;
+    font-family: $letradefault;
 }
 
-/*Condicionales*/
-$fondo: whitesmoke;
-
-
 footer {
-    color:whitesmoke;
-    background-color: #d7cec7;
+    color: $blanco;
+    background-color: $colorfooter;
     display: flex;
     flex-direction: row;
     position: relative;
@@ -23,10 +19,10 @@ footer {
     transition: background-image 2s;
     bottom: 0;
     padding: $step/10;
-    font-family: 'Bebas Neue', cursive;
+    font-family: $letradefault;
     a{
         text-decoration: none;
-        color: #76323F;
+        color: $bordo;
     }
     &:hover {
         background-image: linear-gradient(to bottom,#D7CEC7,#C09F80);
@@ -41,8 +37,8 @@ footer {
 }
 
 header {
-    background-color: whitesmoke;
-    color: #565656;
+    background-color: $blanco;
+    color: $grisoscuro;
     text-align: start;
     padding: $step/2;
     width: 100%;
@@ -55,7 +51,7 @@ header {
     flex-wrap: wrap;
     width: 100%;
     h1 {
-        font-family: 'Rock Salt', cursive;
+        font-family: $fuentesecundaria;
     }
 }
 
@@ -65,7 +61,7 @@ nav {
     @include fontandbackground();
     width: 100%;
     a{
-        color: #565656;
+        color: $grisoscuro;
         padding: 14px 20px;
         text-decoration: none;
     }
@@ -80,7 +76,7 @@ nav {
     grid-template-areas: "vino cerveza champagne bebidasblancas";
     justify-content: space-evenly;
     margin: auto;
-    background-color: whitesmoke;
+    background-color: $blanco;
     padding: $step/2;
     position: relative;
     .fotocatalogo {
@@ -102,13 +98,6 @@ ul {
     list-style: none;
 }
 
-/*.menu {
-    display: inline-block;
-    width: 19%;
-    font-size: 14px;
-    position: relative;
-}*/
-
 .caja {
     position: relative;
     display: inline-block;
@@ -119,7 +108,7 @@ ul {
     .texto {
         position: absolute;
         top: 20%;
-        font-family: 'bebas neue', cursive;
+        font-family: $letradefault;
         font-size: 60px;
         color: white;
         margin: 3%;
@@ -159,7 +148,7 @@ body{
         @include fontandbackground();
         .contenedorcentral {
             text-align: center;
-            font-family: 'bebas neue', cursive;
+            font-family: $letradefault;
             display: grid;
             grid-template-areas: 
             "titulo",
@@ -179,9 +168,9 @@ body{
     }
 }
 
-@if $fondo == whitesmoke {
-    main {color: #565656;}
-}
+@if $fondo == $blanco {
+    main {color: $grisoscuro;}
+} 
 
 .navcontainer {
     display: flex;
@@ -189,3 +178,4 @@ body{
     width: 100%;
     @include fontandbackground();
 }
+

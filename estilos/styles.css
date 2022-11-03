@@ -1,9 +1,7 @@
-/* Variables */
 /*Mixin*/
-/*Condicionales*/
 footer {
   color: whitesmoke;
-  background-color: #d7cec7;
+  background-color: #D7CEC7;
   display: flex;
   flex-direction: row;
   position: relative;
@@ -13,7 +11,7 @@ footer {
   transition: background-image 2s;
   bottom: 0;
   padding: 10px;
-  font-family: "Bebas Neue", cursive;
+  font-family: "bebas neue", cursive;
 }
 footer a {
   text-decoration: none;
@@ -97,12 +95,6 @@ ul {
   list-style: none;
 }
 
-/*.menu {
-    display: inline-block;
-    width: 19%;
-    font-size: 14px;
-    position: relative;
-}*/
 .caja {
   position: relative;
   display: inline-block;
