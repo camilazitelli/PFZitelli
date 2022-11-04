@@ -87,7 +87,7 @@ nav .navcontainer, .encabezado .navcontainer {
   left: 5%;
 }
 .principal .caja .texto {
-  position: absolute;
+  position: relative;
   top: 20%;
   font-family: "bebas neue", cursive;
   font-size: 60px;
