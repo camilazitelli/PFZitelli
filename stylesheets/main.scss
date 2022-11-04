@@ -1,6 +1,5 @@
 @import "masterstylesheet";
 
-
 /*Mixin*/
 @mixin fontandbackground {
     background-color: $blanco;
@@ -45,11 +44,9 @@ header {
 }
 
 .encabezado {
-    display: flex;
-    flex-direction: row;
     justify-content: flex-start;
     flex-wrap: wrap;
-    width: 100%;
+    @extend nav;
     h1 {
         font-family: $fuentesecundaria;
     }
@@ -69,6 +66,12 @@ nav {
         .navcontainer {flex-direction: column;
         }
     }
+    .navcontainer {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        @include fontandbackground();
+    }
 }
 
 .principal {
@@ -79,6 +82,24 @@ nav {
     background-color: $blanco;
     padding: $step/2;
     position: relative;
+    .caja {
+        position: relative;
+        display: inline-block;
+        padding: $step/4;
+        margin-left: 0,2%;
+        left: 5%;
+        .texto {
+            position: absolute;
+            top: 20%;
+            font-family: $letradefault;
+            font-size: 60px;
+            color: white;
+            margin: 3%;
+            &:hover {
+                font-size: 70px;
+            }
+        }
+    }
     .fotocatalogo {
         width: $step * 3;
         height: $step * 4;
@@ -98,26 +119,6 @@ ul {
     list-style: none;
 }
 
-.caja {
-    position: relative;
-    display: inline-block;
-    justify-self: center;
-    padding: $step/4;
-    margin-left: 0,2%;
-    left: 5%;
-    .texto {
-        position: absolute;
-        top: 20%;
-        font-family: $letradefault;
-        font-size: 60px;
-        color: white;
-        margin: 3%;
-        &:hover {
-            font-size: 70px;
-        }
-    }
-}
-
 /*Animacion*/
 
 .barrel {
@@ -130,7 +131,7 @@ ul {
     animation-iteration-count: infinite;
     animation-timing-function: ease-in;
     animation-duration: 2s;
-    animation-delay: 2s;
+    animation-delay: 0s;
     @keyframes barrel {
         0% { transform: rotate(0deg); }
         25% { transform: rotate(5deg); }
@@ -171,11 +172,3 @@ body{
 @if $fondo == $blanco {
     main {color: $grisoscuro;}
 } 
-
-.navcontainer {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    @include fontandbackground();
-}
-

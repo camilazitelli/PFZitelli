@@ -38,32 +38,36 @@ header {
 }
 
 .encabezado {
-  display: flex;
-  flex-direction: row;
   justify-content: flex-start;
   flex-wrap: wrap;
-  width: 100%;
 }
 .encabezado h1 {
   font-family: "Rock Salt", cursive;
 }
 
-nav {
+nav, .encabezado {
   display: flex;
   flex-direction: row;
   background-color: whitesmoke;
   font-family: "bebas neue", cursive;
   width: 100%;
 }
-nav a {
+nav a, .encabezado a {
   color: #565656;
   padding: 14px 20px;
   text-decoration: none;
 }
 @media screen and (max-width: 768px) {
-  nav .navcontainer {
+  nav .navcontainer, .encabezado .navcontainer {
     flex-direction: column;
   }
+}
+nav .navcontainer, .encabezado .navcontainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: whitesmoke;
+  font-family: "bebas neue", cursive;
 }
 
 .principal {
@@ -74,6 +78,24 @@ nav a {
   background-color: whitesmoke;
   padding: 50px;
   position: relative;
+}
+.principal .caja {
+  position: relative;
+  display: inline-block;
+  padding: 25px;
+  margin-left: 0, 2%;
+  left: 5%;
+}
+.principal .caja .texto {
+  position: absolute;
+  top: 20%;
+  font-family: "bebas neue", cursive;
+  font-size: 60px;
+  color: white;
+  margin: 3%;
+}
+.principal .caja .texto:hover {
+  font-size: 70px;
 }
 .principal .fotocatalogo {
   width: 300px;
@@ -95,26 +117,6 @@ ul {
   list-style: none;
 }
 
-.caja {
-  position: relative;
-  display: inline-block;
-  justify-self: center;
-  padding: 25px;
-  margin-left: 0, 2%;
-  left: 5%;
-}
-.caja .texto {
-  position: absolute;
-  top: 20%;
-  font-family: "bebas neue", cursive;
-  font-size: 60px;
-  color: white;
-  margin: 3%;
-}
-.caja .texto:hover {
-  font-size: 70px;
-}
-
 /*Animacion*/
 .barrel {
   -webkit-animation-name: barrel;
@@ -130,8 +132,8 @@ ul {
           animation-timing-function: ease-in;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
 }
 @-webkit-keyframes barrel {
   0% {
@@ -197,12 +199,4 @@ body main #formulariodecontacto {
 
 main {
   color: #565656;
-}
-
-.navcontainer {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  background-color: whitesmoke;
-  font-family: "bebas neue", cursive;
 }/*# sourceMappingURL=main.css.map */
