@@ -38,34 +38,38 @@ header {
 }
 
 .encabezado {
-  display: flex;
-  flex-direction: row;
   justify-content: flex-start;
   flex-wrap: wrap;
-  width: 100%;
 }
 .encabezado h1 {
   font-family: "Rock Salt", cursive;
 }
 
-nav {
+nav, .encabezado {
   display: flex;
   flex-direction: row;
   background-color: whitesmoke;
   font-family: "bebas neue", cursive;
   width: 100%;
 }
-nav a {
+nav a, .encabezado a {
   color: #565656;
   padding: 14px 20px;
   text-decoration: none;
 }
-@media screen and (max-width: 768px) {
-  nav .navcontainer {
-    flex-direction: column;
-  }
+nav .navcontainer, .encabezado .navcontainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: whitesmoke;
+  font-family: "bebas neue", cursive;
 }
 
+@media screen and (max-width: 768px) {
+  .navcontainer {
+    flex-wrap: wrap;
+  }
+}
 .principal {
   display: grid;
   grid-template-areas: "vino cerveza champagne bebidasblancas";
@@ -74,6 +78,25 @@ nav a {
   background-color: whitesmoke;
   padding: 50px;
   position: relative;
+}
+.principal .caja {
+  position: relative;
+  display: inline-block;
+  padding: 25px;
+  margin-left: 0, 2%;
+  left: 5%;
+  text-align: center;
+}
+.principal .caja .texto {
+  position: relative;
+  top: 20%;
+  font-family: "bebas neue", cursive;
+  font-size: 60px;
+  color: #565656;
+  margin: 3%;
+}
+.principal .caja .texto:hover {
+  font-size: 70px;
 }
 .principal .fotocatalogo {
   width: 300px;
@@ -95,26 +118,6 @@ ul {
   list-style: none;
 }
 
-.caja {
-  position: relative;
-  display: inline-block;
-  justify-self: center;
-  padding: 25px;
-  margin-left: 0, 2%;
-  left: 5%;
-}
-.caja .texto {
-  position: absolute;
-  top: 20%;
-  font-family: "bebas neue", cursive;
-  font-size: 60px;
-  color: white;
-  margin: 3%;
-}
-.caja .texto:hover {
-  font-size: 70px;
-}
-
 /*Animacion*/
 .barrel {
   animation-name: barrel;
@@ -126,7 +129,7 @@ ul {
   animation-iteration-count: infinite;
   animation-timing-function: ease-in;
   animation-duration: 2s;
-  animation-delay: 2s;
+  animation-delay: 0s;
 }
 @keyframes barrel {
   0% {
@@ -162,7 +165,7 @@ body main .contenedorcentral {
   grid-template-areas: "titulo", "texto";
   align-items: start;
   margin: auto;
-  padding-bottom: 5%;
+  padding-bottom: 20%;
   padding-top: 5%;
 }
 body main #formulariodecontacto {
@@ -177,12 +180,8 @@ main {
   color: #565656;
 }
 
-.navcontainer {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  background-color: whitesmoke;
-  font-family: "bebas neue", cursive;
-}
+/*.principalindex {
+    padding-bottom: 20%;
+}*/
 
 /*# sourceMappingURL=styles.css.map */

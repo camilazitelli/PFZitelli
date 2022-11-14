@@ -62,15 +62,15 @@ nav {
         padding: 14px 20px;
         text-decoration: none;
     }
-    @media screen and (max-width: 768px) {
-        .navcontainer {flex-direction: column;
-        }
-    }
     .navcontainer {
         display: flex;
         flex-direction: row;
         width: 100%;
         @include fontandbackground();
+    }
+}
+@media screen and (max-width: 768px) {
+    .navcontainer {flex-wrap: wrap;
     }
 }
 
@@ -88,12 +88,13 @@ nav {
         padding: $step/4;
         margin-left: 0,2%;
         left: 5%;
+        text-align: center;
         .texto {
             position: relative;
             top: 20%;
             font-family: $letradefault;
             font-size: 60px;
-            color: white;
+            color: $grisoscuro;
             margin: 3%;
             &:hover {
                 font-size: 70px;
@@ -156,7 +157,7 @@ body{
             "texto",;
             align-items: start;
             margin: auto;
-            padding-bottom: 5%;
+            padding-bottom: 20%;
             padding-top: 5%;
         }
         #formulariodecontacto {
@@ -172,3 +173,7 @@ body{
 @if $fondo == $blanco {
     main {color: $grisoscuro;}
 } 
+
+/*.principalindex {
+    padding-bottom: 20%;
+}*/
